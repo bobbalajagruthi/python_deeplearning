@@ -17,6 +17,7 @@ def string_alternative(input2):
 
 def file_prog():
     file1= open("input_file.txt","r")
+    file2 = open("output_file.txt", "w")
     if file1.mode =="r":
         sentence = file1.read()
         words=sentence.split("\n")
@@ -30,12 +31,15 @@ def file_prog():
         for i in k:
             counter1 = 0
             for j in k :
-                if i == j and i not in final_list :
+                if i.lower() == j.lower() and i not in final_list :
                     counter1+=1
             if i not in final_list:
                final_list.append(i)
             if i in final_list and counter1 !=0:
-                print(i,counter1)
+                r=str(i)+":"+str(counter1)
+                file2.write(r)
+                file2.write("\n")
+
 
 
 
