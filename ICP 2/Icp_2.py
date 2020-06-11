@@ -1,7 +1,8 @@
 def lb_to_kg(input1):
     output=[]
+    print("Weight in Lb's:",input1)
     for i in range(0,len(input1)):
-        i = round((float(input1[i])*(0.453592)),2)
+        i = round(input1[i]*(0.453592),2)
         output.append(i)
     return output
 
@@ -41,33 +42,17 @@ def file_prog():
                 file2.write("\n")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__" :
     lines = []
     while True:
         line = input("enter weight in lbs: ")
         if line:
-            lines.append(line)
+            lines.append(float(line))
         else:
             break
     result1 = lb_to_kg(lines)
-    print(result1)
+    print("Weight in kg's:",result1)
     input2=input("enter string: ")
     result2 = string_alternative(input2)
-    print(result2)
+    print("Output string:",result2)
     file_prog()
