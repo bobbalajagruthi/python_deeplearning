@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 url = requests.get("https://en.wikipedia.org/wiki/Deep_learning")
+#gets the html text
 htmltext = url.text
 soup = BeautifulSoup(htmltext, 'html.parser')
 title = soup.find('title')
