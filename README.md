@@ -6,5 +6,9 @@ Basics of python : Operations on strings
 * Lists
 * Substrings
 * File opening,reading,writing
+#### ICP3
+* Class,Inheritance
+* Numpy
+* Web Scraping
 
 
